@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+src/Add name in table
+src/assets
+src/Bg Changer
+src/Counter
+src/E commerce
+src/Fom Hooks
+src/Pagination
+src/Password Generator
+src/Practise
+src/Product(useEffect)
+src/Product
+src/ReactForm
+src/ReactRedux_IncDec
+src/reduxTodoList
+src/ReduxToolKit
+src/Router
+src/routing
+src/Set_E_Commerce_Website
+# src/todo List
+src/UseContext
+src/useReducer
