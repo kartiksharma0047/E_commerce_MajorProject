@@ -1,0 +1,182 @@
+.ProductDetailsLoading {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProductDetailsPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0 8rem 0;
+}
+
+.ProductDetailsPagePosition {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.ProductDetailsPageLeft {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProductDetailsPage h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.ProductDetailsPage img {
+    width: 450px;
+    height: 500px;
+    border-radius: 1rem;
+}
+
+
+.ProductDetailsPageRight {
+    width: 50%;
+}
+
+.ProductDetailsPageRight h2 {
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+}
+
+.ProductDetailsPageRight>p {
+    font-size: 1.3rem;
+}
+
+.Category_Price_Rating_Div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.CategorySpan span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.CategorySpan {
+    padding-bottom: 1rem;
+}
+
+.PriceSpan {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.PriceSpan span {
+    font-size: 1rem;
+    color: red;
+}
+
+.RatingCanvaDiv {
+    position: relative;
+    width: max-content;
+    text-align: center;
+}
+
+.RatingCanvaDiv h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.4rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.RatingCanvaDiv h2 {
+    position: absolute;
+    top: 75px;
+    font-size: 1.2rem !important;
+    left: 70px;
+}
+
+.RatingCanvaDiv p {
+    margin-top: 0.5rem;
+}
+
+.ProductDetailsButton {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.ProductDetailsButton button {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #b65840;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    transition: all 0.3s;
+}
+
+.ProductDetailsButton button:active {
+    transform: scale(0.9);
+}
+
+.ArrowBackProduct {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    color: rgb(0, 145, 255);
+    margin: 0 3rem 2rem 3rem;
+}
+
+.fa-circle-left {
+    width: 55px;
+    height: 55px;
+    transition: all 0.3s;
+}
+
+/* Light and Dark CSS */
+.LightProductDetail {
+    background-color: rgb(208, 208, 208);
+    color: black;
+}
+
+.DarkProductDetail {
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
+
+.LightProductDetail .ProductDetailsButton button:hover {
+    background-color: #de5837;
+    box-shadow: 1px 1px 3px black;
+}
+
+.DarkProductDetail .ProductDetailsButton button:hover {
+    background-color: #903923;
+    box-shadow: 1px 1px 3px white;
+}
+
+.LightProductDetail .PriceSpan {
+    color: black;
+}
+
+.DarkProductDetail .PriceSpan {
+    color: white;
+}
+
+.DarkProductDetail .ArrowBackProduct:hover .fa-circle-left {
+    transform: scale(1.1);
+    color: rgb(71, 175, 255);
+}
+
+.LightProductDetail .ArrowBackProduct:hover .fa-circle-left {
+    transform: scale(1.1);
+    color: rgb(0, 113, 199);
+}

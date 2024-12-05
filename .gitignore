@@ -22,24 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-src/Add name in table
-src/assets
-src/Bg Changer
-src/Counter
-src/E commerce
-src/Fom Hooks
-src/Pagination
-src/Password Generator
-src/Practise
-src/Product(useEffect)
-src/Product
-src/ReactForm
-src/ReactRedux_IncDec
-src/reduxTodoList
-src/ReduxToolKit
-src/Router
-src/routing
-src/Set_E_Commerce_Website
-# src/todo List
-src/UseContext
-src/useReducer

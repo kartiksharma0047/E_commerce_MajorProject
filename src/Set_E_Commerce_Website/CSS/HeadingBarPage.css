@@ -1,0 +1,766 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.LayoutPage {
+  position: relative;
+}
+
+.modal-overlay {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-scroll {
+  filter: blur(3px);
+}
+
+.HeaderContainer {
+  height: 9vw;
+  text-align: center;
+}
+
+.HeaderTop {
+  height: 40%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0 50px 0 0;
+}
+
+.UsernameHeader {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-content: end;
+}
+
+.UsernameHeader h3 {
+  font-size: 0.8rem;
+}
+
+.UsernameHeader h3 span {
+  margin-left: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.UsernameHeadDiv {
+  position: relative;
+  margin-left: 1.2rem;
+}
+
+.UsernameHeader .UsernameDiv {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.UsernameDiv .fa-user {
+  height: 20px;
+}
+
+.UsernameDiv:hover {
+  transform: scale(1.2);
+}
+
+.UsernameDiv:active {
+  transform: scale(0.9);
+}
+
+.FaUserDropDownHidden {
+  display: none;
+}
+
+.FaUserDropDown {
+  display: block;
+  position: absolute;
+  top: 35px;
+  width: 200px;
+  height: 250px;
+  z-index: 100;
+  right: -20px;
+}
+
+.FaUserDropDownTop {
+  height: 40%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+}
+
+.FaUserDropDownTop div {
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FaUserDropDownTop h5 {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+.FaUserDropDownTop div svg {
+  font-size: 50px;
+}
+
+.FaUserDropDownDown {
+  height: 60%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.FaUserDropDownDown button {
+  font-size: 0.8rem !important;
+  width: 100%;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  border-radius: 0 !important;
+  transition: all 0.2s !important;
+}
+
+.FaUserDropDownDown button svg {
+  margin-right: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
+.HeaderContainer a,
+.HeaderContainer button {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.HeaderTop button {
+  margin: 0 30px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.HeaderBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  height: 60%;
+}
+
+
+.HeaderBottom h1 {
+  background-color: #b65840;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-family: cursive;
+}
+
+.HeaderBottom ul {
+  list-style-type: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.HeaderBottomRight {
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-sun,
+.fa-cart-shopping {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.CartAdjust {
+  position: relative;
+}
+
+.CartAdjust p {
+  position: absolute;
+  background-color: #ff6cdd;
+  width: max-content;
+  border-radius: 40%;
+  font-weight: 900;
+  font-size: 20px;
+  transform: scale(0.6);
+  top: -20px;
+  z-index: 2;
+}
+
+.CartCountUnShift {
+  padding: 1px 5px;
+  right: -20px;
+}
+
+.CartCountShift {
+  padding: 1px 10px;
+  right: -18px;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: red;
+  transform-origin: 0%;
+  z-index: 100;
+}
+
+.ThemeSettings {
+  position: fixed;
+  z-index: 5;
+  top: 0px;
+  right: 0px;
+  width: 20vw;
+  height: 100%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.fa-x {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.fa-x:hover {
+  transform: scale(1.2);
+}
+
+.fa-x:active {
+  transform: scale(0.9);
+}
+
+.ThemeSettings h2 {
+  padding-top: 3rem;
+  width: 90%;
+  text-align: left;
+  margin: 0 auto 2rem auto;
+  padding-bottom: 0.5rem;
+}
+
+.RadioManagement {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.RadioManagement label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.RadioManagement label:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #b65840;
+  position: absolute;
+  top: 6px;
+  left: 1px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.RadioManagement input[type="radio"] {
+  opacity: 0;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 15px);
+  cursor: pointer;
+}
+
+.bullet {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -3px;
+  top: 2px;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet {
+  position: absolute;
+  opacity: 1;
+  animation-name: explode;
+  animation-duration: 0.350s;
+}
+
+.line {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  opacity: 0;
+}
+
+.line.zero {
+  left: 11px;
+  top: -21px;
+  transform: translateY(20px);
+  width: 2px;
+  height: 10px;
+}
+
+.line.one {
+  right: -7px;
+  top: -11px;
+  transform: rotate(-55deg) translate(-9px);
+}
+
+.line.two {
+  right: -20px;
+  top: 11px;
+  transform: translate(-9px);
+}
+
+.line.three {
+  right: -8px;
+  top: 35px;
+  transform: rotate(55deg) translate(-9px);
+}
+
+.line.four {
+  left: -8px;
+  top: -11px;
+  transform: rotate(55deg) translate(9px);
+}
+
+.line.five {
+  left: -20px;
+  top: 11px;
+  transform: translate(9px);
+}
+
+.line.six {
+  left: -8px;
+  top: 35px;
+  transform: rotate(-55deg) translate(9px);
+}
+
+.line.seven {
+  left: 11px;
+  bottom: -21px;
+  transform: translateY(-20px);
+  width: 2px;
+  height: 10px;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.zero {
+  animation-name: drop-zero;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.one {
+  animation-name: drop-one;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.two {
+  animation-name: drop-two;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.three {
+  animation-name: drop-three;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.four {
+  animation-name: drop-four;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.five {
+  animation-name: drop-five;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.six {
+  animation-name: drop-six;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.RadioManagement input[type="radio"]:checked~.bullet .line.seven {
+  animation-name: drop-seven;
+  animation-delay: 0.100s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes explode {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drop-zero {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    height: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-2px);
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-one {
+  0% {
+    opacity: 0;
+    transform: rotate(-55deg) translate(-20px);
+    width: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-55deg) translate(9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-two {
+  0% {
+    opacity: 0;
+    transform: translate(-20px);
+    width: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-three {
+  0% {
+    opacity: 0;
+    transform: rotate(55deg) translate(-20px);
+    width: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(55deg) translate(9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-four {
+  0% {
+    opacity: 0;
+    transform: rotate(55deg) translate(20px);
+    width: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(55deg) translate(-9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-five {
+  0% {
+    opacity: 0;
+    transform: translate(20px);
+    width: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-six {
+  0% {
+    opacity: 0;
+    transform: rotate(-55deg) translate(20px);
+    width: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-55deg) translate(-9px);
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop-seven {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    height: 10px;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(2px);
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+
+/* Dark And Light CSS */
+
+.LightTopHeaderBackGround,
+.DarkTopHeaderBackGround .FaUserDropDownTop {
+  background-color: #0fa4af;
+}
+
+.DarkTopHeaderBackGround,
+.LightTopHeaderBackGround .FaUserDropDownTop {
+  background-color: #003135;
+}
+
+.DarkBottomBackGround .DarkActive,
+.DarkTopHeaderBackGround .BtnBackground {
+  background-color: #00a0ae;
+  color: black !important;
+}
+
+.LightBottomBackGround .LightActive,
+.LightTopHeaderBackGround .BtnBackground {
+  background-color: #006b77;
+  color: white !important;
+}
+
+.BtnBackgroundNull {
+  background-color: transparent;
+}
+
+.LightBottomBackGround {
+  background-color: #1e7e8f;
+}
+
+.DarkBottomBackGround {
+  background-color: #024950;
+}
+
+.DarkBottomBackGround a:hover,
+.DarkTopHeaderBackGround button:hover {
+  background-color: #00a0ae;
+}
+
+.LightBottomBackGround a:hover,
+.LightTopHeaderBackGround button:hover {
+  background-color: #006b77;
+}
+
+.DarkBottomBackGround a,
+.DarkTopHeaderBackGround a,
+.DarkBottomBackGround h1,
+.CartCountDark,
+.ThemeSettingDark label,
+.DarkXFont,
+.DarkFont,
+.LightFont:hover,
+.DarkTopHeaderBackGround button,
+.DarkTopHeaderBackGround .UsernameHeader,
+.LightTopHeaderBackGround .FaUserDropDownDown button, .LightTopHeaderBackGround .FaUserDropDownTop h5 ,.DarkTopHeaderBackGround .FaUserDropDownDown button:hover{
+  color: white;
+}
+
+.LightBottomBackGround a,
+.LightTopHeaderBackGround a,
+.LightBottomBackGround h1,
+.CartCountLight,
+.ThemeSettingLight label,
+.LightXFont,
+.LightFont,
+.DarkFont:hover,
+.LightTopHeaderBackGround button,
+.LightTopHeaderBackGround .UsernameHeader,
+.DarkTopHeaderBackGround .FaUserDropDownDown button,.DarkTopHeaderBackGround .FaUserDropDownTop h5, .LightTopHeaderBackGround .FaUserDropDownDown button:hover  {
+  color: black;
+}
+
+
+.ThemeSettingLight {
+  background-color: rgb(208, 208, 208);
+  box-shadow: 0px 0px 30px black, -1px 0 5px black;
+}
+
+.ThemeSettingDark {
+  background-color: rgb(36, 36, 36);
+  box-shadow: 0px 0px 15px white, -1px 0 2px white;
+}
+
+.ThemeSettingLight .bullet {
+  border: 2px solid black;
+}
+
+.ThemeSettingDark .bullet {
+  border: 2px solid white;
+}
+
+.ThemeSettingDark h2 {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.ThemeSettingLight h2 {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.ThemeSettingDark .line {
+  background-color: white;
+}
+
+.ThemeSettingLight .line {
+  background-color: black;
+}
+
+.dark-themeModal,
+.LightTopHeaderBackGround .UsernameHeader .UsernameDiv {
+  background-color: rgba(36, 36, 36, 0.4);
+}
+
+.light-themeModal,
+.DarkTopHeaderBackGround .UsernameHeader .UsernameDiv {
+  background-color: rgba(208, 208, 208, 0.4);
+}
+
+.DarkTopHeaderBackGround .FaUserDropDownDown {
+  background-color: rgb(208, 208, 208);
+}
+
+.LightTopHeaderBackGround .FaUserDropDownDown {
+  background-color: rgb(36, 36, 36);
+}
+
+.DarkTopHeaderBackGround .FaUserDropDownTop div,.DarkTopHeaderBackGround .FaUserDropDownDown button:hover {
+  background-color: black;
+}
+
+.LightTopHeaderBackGround .FaUserDropDownTop div,.LightTopHeaderBackGround .FaUserDropDownDown button:hover {
+  background-color: white;
+}

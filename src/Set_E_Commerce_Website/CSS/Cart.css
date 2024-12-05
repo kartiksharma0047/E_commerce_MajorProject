@@ -1,0 +1,870 @@
+.CartContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.CartLayout {
+  width: 90vw;
+  margin: 4rem 0 2rem 0;
+}
+
+.CartLoading {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.EmptyCart {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.EmptyCart img {
+  height: 300px;
+  width: 300px;
+}
+
+.EmptyCart h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.EmptyCart p {
+  font-size: 1.1rem;
+}
+
+.EmptyCart a {
+  display: block;
+  margin-top: 2rem;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 200px;
+  transition: all 0.3s;
+}
+
+.EmptyCart a:hover {
+  transform: scale(1.05);
+}
+
+.CartItemLayout {
+  display: flex;
+}
+
+.CartItemDetail {
+  width: 80vw;
+  margin-right: 1vw;
+  padding: 0 1.5rem;
+  height: max-content;
+}
+
+.CartItemDetail li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0.5rem 0;
+  padding: 2rem 0;
+  border-bottom: 2px solid black;
+}
+
+.CartItemDetail li:last-child {
+  border-bottom: none;
+}
+
+.CartItemDetailLeft {
+  display: flex;
+  align-items: center;
+}
+
+.CartItemDetailLeftChild {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.CartItemDetailLeftChild img {
+  width: 100%;
+  height: 100%;
+}
+
+.CartItemDetailRightChild {
+  width: 300px;
+}
+
+.CartItemDetailRightChild h1 {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.CartItemDetailRightChild h2 {
+  color: red;
+}
+
+.CartItemDetailMid {
+  display: flex;
+}
+
+.CartItemDetailMid button {
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 2px black;
+  transition: all 0.3s;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.CartItemDetailMid button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 4px black;
+}
+
+.CartItemDetailMid button:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 2px black;
+}
+
+.CartItemDetailMid input {
+  text-align: center;
+  font-size: 20px;
+  height: 25px;
+  width: 40px;
+  border: none;
+  box-shadow: 0 0 2px black;
+}
+
+.CartItemDetailMid input:focus {
+  outline: none;
+}
+
+.CartItemDetailRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CartItemDetailRight h2 {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transform: scale(0.6);
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms;
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%);
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px) scale(1.152);
+  transition: transform 600ms;
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px) scale(1.152);
+  transition: transform 250ms;
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px) scale(1.152);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms;
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.PriceDetails {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.ItemPrice {
+  box-shadow: 0px 0px 5px black;
+}
+
+.ItemPrice>h1 {
+  font-size: 1.4rem;
+  color: grey;
+  border-bottom: 2px solid rgb(185, 185, 185);
+  padding: 15px 20px;
+}
+
+.ItemPrice div {
+  font-size: 0.6rem;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ItemPrice div h1 {
+  font-weight: 500;
+}
+
+.ItemPrice div h2 {
+  font-weight: lighter;
+  font-size: 1.1rem;
+}
+
+.DiscountPrice h2 {
+  color: green;
+}
+
+.GreenColor {
+  color: green;
+}
+
+.underLine {
+  text-decoration: line-through;
+}
+
+.TotalPrice {
+  border-top: 1px dashed rgb(161, 161, 161);
+  border-bottom: 1px dashed rgb(161, 161, 161);
+  padding: 15px 0px !important;
+  margin: 0px 20px;
+}
+
+.TotalPrice h1 {
+  font-size: 1.2rem;
+  font-weight: 900 !important;
+}
+
+.PriceHighlights h1 {
+  font-size: 1rem;
+  font-weight: 700 !important;
+  color: green;
+}
+
+.PlaceOrder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PlaceOrder a {
+  margin-top: 2rem;
+  color: white;
+  text-decoration: none;
+  background-color: #fb641b;
+  border: none;
+  font-size: 1.6rem;
+  padding: 15px 0px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.PlaceOrder button:hover {
+  transform: scale(1.02);
+  background-color: #ff5500;
+}
+
+.LightCartLayout .PlaceOrder button:hover {
+  box-shadow: 0px 0px 3px black;
+}
+
+.DarkCartLayout .PlaceOrder button:hover {
+  box-shadow: 0px 0px 3px white;
+}
+
+.PlaceOrder button:active {
+  transform: scale(0.9);
+}
+
+.ShieldCheck {
+  position: relative;
+  width: max-content;
+  height: max-content;
+  margin-left: 0.4rem;
+}
+
+.fa-shield {
+  transform: scale(1.6);
+  margin-right: 10px;
+}
+
+.fa-check {
+  transform: scale(1.1);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.fa-info {
+  cursor: pointer;
+  padding: 3px;
+  background-color: yellow;
+  color: black;
+  border: 1px solid black;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.ExtraDetails {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.ExtraDetails p {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+@media screen and (max-width:1200px) {
+  .CartLayout {
+    width: 95vw;
+  }
+
+  .CartItemDetail {
+    box-shadow: 0px 0px 4px black;
+    padding: 0 0.5rem;
+  }
+
+  .CartItemDetailLeftChild {
+    height: 90px;
+    width: 90px;
+    margin-right: 10px;
+  }
+
+  .CartItemDetailRightChild {
+    width: 200px;
+  }
+
+  .CartItemDetailRightChild h1 {
+    font-size: 0.7rem;
+  }
+
+  .CartItemDetailMid button {
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 20px;
+    height: 20px;
+  }
+
+  .CartItemDetailMid button:hover {
+    box-shadow: 0 0 3px black;
+  }
+
+  .CartItemDetailMid button:first-child {
+    padding-bottom: 3px;
+  }
+
+  .CartItemDetailMid input {
+    font-size: 18px;
+    height: 20px;
+    width: 35px;
+  }
+
+  .CartItemDetailRight {
+    width: 150px;
+  }
+
+  .CartItemDetailRight h2 {
+    font-size: 0.8rem;
+  }
+
+  .button-pushable {
+    transform: scale(0.5);
+  }
+
+  .button-front {
+    padding: 10px 15px;
+  }
+
+  .ItemPrice {
+    box-shadow: 0px 0px 4px black;
+  }
+
+  .ItemPrice>h1 {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
+
+  .ItemPrice div {
+    font-size: 0.4rem;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ItemPrice div h2 {
+    font-weight: lighter;
+    font-size: 0.8rem;
+  }
+
+  .TotalPrice {
+    padding: 10px 0px !important;
+    margin: 0px 15px;
+  }
+
+  .TotalPrice h1 {
+    font-size: 1rem;
+  }
+
+  .PriceHighlights h1 {
+    font-size: 0.9rem;
+  }
+
+  .PlaceOrder button {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    padding: 10px 40px;
+    transform: scale(1.2);
+  }
+
+  .PlaceOrder button:hover {
+    transform: scale(1.01);
+  }
+
+  .PlaceOrder button:active {
+    transform: scale(0.9);
+  }
+
+  .fa-shield {
+    transform: scale(1.4);
+  }
+
+  .fa-check {
+    transform: scale(0.9);
+  }
+
+  .fa-info {
+    padding: 2px;
+    width: 7px;
+    height: 7px;
+  }
+
+  .ExtraDetails {
+    margin-top: 1.1rem;
+  }
+
+  .ExtraDetails p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width:780px) {
+  .CartItemDetail {
+    box-shadow: 0px 0px 3px black;
+  }
+
+  .CartItemDetailLeftChild {
+    height: 70px;
+    width: 70px;
+  }
+
+  .CartItemDetailRightChild {
+    width: 150px;
+  }
+
+  .CartItemDetailRightChild h1 {
+    font-size: 0.6rem;
+    margin: 5px 0;
+  }
+
+  .CartItemDetailRightChild h2 {
+    font-size: 1rem;
+  }
+
+  .CartItemDetailMid button {
+    cursor: pointer;
+    font-size: 1rem;
+    width: 15px;
+    height: 15px;
+  }
+
+  .CartItemDetailMid button:first-child {
+    padding-bottom: 1px;
+  }
+
+  .CartItemDetailMid input {
+    font-size: 14px;
+    height: 15px;
+    width: 25px;
+  }
+
+  .CartItemDetailRight h2 {
+    font-size: 0.6rem;
+  }
+
+  .button-pushable {
+    transform: scale(0.5);
+  }
+
+  .button-front {
+    padding: 7px 15px;
+  }
+
+  .ItemPrice {
+    box-shadow: 0px 0px 3px black;
+  }
+
+  .ItemPrice>h1 {
+    font-size: 0.7rem;
+    padding: 10px 10px;
+  }
+
+  .ItemPrice div {
+    font-size: 0.3rem;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ItemPrice div h2 {
+    font-weight: lighter;
+    font-size: 0.5rem;
+  }
+
+  .TotalPrice {
+    padding: 5px 0px !important;
+    margin: 0px 10px;
+  }
+
+  .TotalPrice h1 {
+    font-size: 0.6rem;
+  }
+
+  .PriceHighlights h1 {
+    font-size: 0.6rem;
+  }
+
+  .PlaceOrder button {
+    margin-top: 1rem;
+    font-size: 0.5rem;
+    padding: 10px 40px;
+    transform: scale(0.95);
+  }
+
+  .PlaceOrder button:active {
+    transform: scale(0.8);
+  }
+
+  .fa-shield {
+    transform: scale(1);
+  }
+
+  .fa-check {
+    transform: scale(0.6);
+  }
+
+  .fa-info {
+    padding: 1px;
+    width: 4px;
+    height: 4px;
+  }
+
+  .ExtraDetails {
+    margin-top: 1.1rem;
+  }
+
+  .ExtraDetails p {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .CartLayout {
+    width: 100vw;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  .CartItemDetail {
+    box-shadow: 0px 0px 2px black;
+    width: 100%;
+    margin-right: 0vw;
+    padding: 0 1.5rem;
+  }
+
+  .CartItemDetail li {
+    margin: 0.3rem 0;
+  }
+
+  .CartItemDetailLeftChild {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .CartItemDetailRight {
+    width: 82px;
+  }
+
+  .CartItemDetailRightChild {
+    width: 82px;
+  }
+
+  .CartItemDetailRightChild h1 {
+    font-size: 0.4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .CartItemDetailMid button {
+    font-size: 0.6rem;
+    width: 10px;
+    height: 10px;
+    font-weight: bolder;
+  }
+
+  .CartItemDetailMid input {
+    font-size: 12px;
+    height: 10px;
+    width: 20px;
+  }
+
+  .CartItemDetailRight h2 {
+    font-size: 0.46rem;
+    margin-top: 0px;
+  }
+
+  .button-pushable {
+    margin-top: 4px;
+    transform: scale(0.3);
+  }
+
+  .button-front {
+    padding: 10px 45px;
+  }
+
+  .PriceDetails {
+    width: 100%;
+  }
+
+  .ItemPrice {
+    box-shadow: 0px 0px 2px black;
+  }
+
+  .ItemPrice>h1 {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .ItemPrice div {
+    font-size: 0.4rem;
+    padding: 10px 10px;
+  }
+
+  .ItemPrice div h2 {
+    font-size: 0.7rem;
+    font-weight: bolder;
+  }
+
+  .TotalPrice {
+    padding: 10px 0px !important;
+  }
+
+  .TotalPrice h1 {
+    font-size: 0.8rem;
+  }
+
+  .PriceHighlights {
+    text-align: center;
+  }
+
+  .PriceHighlights h1 {
+    width: 100%;
+    font-size: 0.7rem;
+    padding: 5px 0px;
+  }
+
+  .PlaceOrder button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 15px 60px;
+    transform: scale(1);
+  }
+
+  .fa-shield {
+    transform: scale(1.3);
+  }
+
+  .fa-check {
+    transform: scale(0.8);
+  }
+
+  .ExtraDetails {
+    width: 77vh;
+    margin: 0 auto;
+    margin-top: 1.1rem;
+  }
+
+  .ExtraDetails p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Light and Dard CSS */
+.LightCartLayout {
+  background-color: rgb(208, 208, 208);
+}
+
+.DarkCartLayout {
+  background-color: rgb(36, 36, 36);
+}
+
+.DarkCartLayout .EmptyCart {
+  color: white;
+}
+
+.LightCartLayout .EmptyCart {
+  color: black;
+}
+
+.DarkCartLayout .EmptyCart a {
+  background-color: #ffb964;
+  color: black;
+}
+
+.LightCartLayout .EmptyCart a {
+  background-color: #ff8c00;
+  color: white;
+}
+
+.DarkCartLayout .CartItemDetail {
+  background-color: white;
+  box-shadow: 0px 0px 5px white;
+}
+
+.LightCartLayout .CartItemDetail {
+  background-color: white;
+  box-shadow: 0 0 5px black;
+}
+
+.DarkCartLayout .ItemPrice {
+  background-color: white;
+  box-shadow: 0px 0px 5px white;
+}
+
+.LightCartLayout .ItemPrice {
+  background-color: white;
+  box-shadow: 0px 0px 5px black;
+}
+
+.DarkCartLayout .ExtraDetails p {
+  color: white;
+}
+
+.LightCartLayout .ExtraDetails p {
+  color: black;
+}
+
+.LightCartLayout .fa-shield {
+  color: gray;
+}
+
+.LightCartLayout .fa-check {
+  color: white;
+}
+
+.DarkCartLayout .fa-shield {
+  color: white;
+}
+
+.DarkCartLayout .fa-check {
+  color: gray;
+}
+
+.LightCartloading {
+  background-color: rgb(208, 208, 208);
+  color: black;
+}
+
+.DarkCartloading {
+  background-color: rgb(36, 36, 36);
+  color: white;
+}
+
+.DarkCartLayout .EmptyCart a:hover {
+  box-shadow: 1px 1px 1px white;
+}
+
+.LightCartLayout .EmptyCart a:hover {
+  box-shadow: 1px 1px 2px black;
+}

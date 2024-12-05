@@ -1,0 +1,363 @@
+.modal-content {
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    color: black;
+}
+
+.HideIcon {
+    display: none;
+}
+
+.SignLogInCloseBtn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignLogInCloseBtn:hover {
+    transform: scale(1.1);
+}
+
+.SignLogInCloseBtn:active {
+    transform: scale(0.9);
+}
+
+.SignLogHideDiv {
+    position: absolute;
+    width: 600px;
+    height: 1000px;
+    z-index: 1;
+    transform: rotateZ(25deg);
+}
+
+.ResetModalTransition .SignLogHideDiv{
+    right: 500px;
+    top: -200px;
+}
+.ApplyModalTransition .SignLogHideDiv{
+    left: 400px;
+    top: -200px;
+}
+
+.ConatainLogSign {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sign CSS */
+
+.SignInDiv,
+.LogInDiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.SignInLeft,
+.LogInRight {
+    width: 50%;
+    color: gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SignInLeft h2,
+.LogInRight h2 {
+    color: black;
+    margin: 0 auto 1.5rem auto;
+    text-align: left;
+    font-weight: 900;
+    width: 70%;
+}
+
+.SignInLeft h2 {
+    font-size: 1.2rem;
+}
+
+.LogInRight h2 {
+    font-size: 2rem;
+}
+
+.SignInLeft .SignInForm {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.SignInLeft .google-signin-button {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    border: 2px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.SignInLeft .SignOrLine {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.3rem;
+}
+
+.SignInLeft .SignOrLine p,.google-login p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: white;
+    padding: 0 20px;
+}
+
+.SignInLeft .SignOrLine hr,.google-login hr {
+    border-top: 1px solid rgb(180, 180, 180);
+}
+
+.SignInLeft .SignInEmail,
+.SignInLeft .SignInPassword,
+.LogInRight .LogInEmail,
+.LogInRight .LogInPassword {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.SignInLeft label,
+.LogInRight label {
+    margin-bottom: 0.2rem;
+}
+
+.SignInLeft input,
+.LogInRight input {
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 3px;
+    height: 25px;
+    font-size: 17px;
+    color: gray;
+    padding: 10px;
+    outline: none;
+}
+
+.SignInLeft .SignInPassword,
+.LogInRight .LogInPassword {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.LogInPassShow,
+.LogInPassHide,
+.SignPassShow,
+.SignPassHide {
+    position: absolute;
+    top: 26px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.SignPassShow,
+.SignPassHide {
+    left: 212px;
+}
+
+.LogInPassShow,
+.LogInPassHide {
+    left: 210px;
+}
+
+.SignPassShow:hover,
+.SignPassHide:hover,
+.LogInPassShow:hover,
+.LogInPassHide:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+.SignPassShow:active,
+.SignPassHide:active,
+.LogInPassShow:active,
+.LogInPassHide:active {
+    transform: scale(0.8);
+}
+
+.CreateAccountBtn,
+.LoginAccountBtn {
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #00a26f;
+    color: white;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.CreateAccountBtn:hover,
+.LoginAccountBtn:hover {
+    transform: scale(1.03);
+}
+
+.CreateAccountBtn:active,
+.LoginAccountBtn:active {
+    transform: scale(0.97);
+}
+
+.ConditionalParaSignIn {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.ConditionalParaSignIn a {
+    color: black;
+}
+
+.SignInRight {
+    width: 35%;
+    z-index: 2;
+    margin-right: 0.5rem;
+    text-align: right;
+}
+
+.SignInRight h1,
+.LogInLeft h1 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+.SignInRight p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.SignInRight h4 {
+    background-color: #00b582;
+    font-size: 0.9rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border-radius: 20px;
+}
+
+.SignInForm form div,.LogInForm form div{
+    position: relative;
+}
+.SignInForm form div .error,.LogInForm form div .error{
+    position: absolute;
+    color: red;
+    top: 8px;
+    right: 0px;
+    text-align: right;
+    font-size: 10px;
+    width: 80px;
+}
+
+.SignInRight h4 a,
+.LogInLeft h4 a {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: inherit;
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+/* Login page CSS */
+
+.LogInLeft {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 0.5rem;
+    color: white;
+}
+
+.LogInLeft p {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.LogInLeft h4 {
+    background-color: #00b582;
+    font-size: 0.9rem;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border-radius: 20px;
+}
+
+.google-login{
+    position: relative;
+    margin-top: 1rem;
+}
+.google-login .LogInGoogleLogo{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.google-login .LogInGoogleLogo svg:last-child{
+    transform: scale(1.1);
+    margin: 0 10px;
+}
+
+
+
+/* Light and Dark CSS */
+
+
+
+.modalDarkContent .SignInRight,
+.modalDarkContent .SignLogInCloseBtn,
+.modalLightContent  {
+    color: white;
+}
+
+.modalLightContent .SignLogInCloseBtn {
+    color: black;
+}
+
+.modalLightContent .SignLogHideDiv {
+    background: linear-gradient(250deg, #a8ffdf, #00bb80 80%);
+}
+
+.modalDarkContent .SignLogHideDiv {
+    background: linear-gradient(230deg, #32ffb4, #178a66 70%);
+}

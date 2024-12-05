@@ -1,0 +1,149 @@
+.DetailsContainer {
+    margin: 4rem 0 0 0;
+}
+
+.DetailsContainer h1 {
+    word-spacing: 10px;
+    margin-bottom: 2rem;
+}
+
+.DetailsBox .DetailsBoxInputRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.DetailsBox .DetailsBoxInputRow div {
+    position: relative;
+}
+
+.DetailsBox input,
+.DetailsBox select {
+    width: 350px;
+    padding: 4px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 0;
+    outline: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-size: 1rem;
+    color: black;
+    font-weight: 700;
+
+    &:hover {
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.311);
+    }
+}
+
+.DetailsBox input::placeholder{
+    color:#757575;
+}
+
+.NextPrev {
+    margin-top: 5rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NextPrev button,.NextPrev a{
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 0 2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.NextPrev .CheckoutDisabledBtn{
+    cursor: not-allowed !important;
+    transition: none;
+    &:hover{
+        transform: scale(1);
+    }
+}
+
+.DetailsBox select option {
+    height: 50px;
+}
+
+.PhoneInputBox {
+    padding-left: 100px !important;
+}
+
+.PhoneInput {
+    position: relative;
+}
+
+.custom-select {
+    position: absolute !important;
+    color: black;
+    width: 80px;
+    left: 0px;
+    bottom: 20px;
+}
+
+.selected-option {
+    background-color: transparent;
+    padding: 4px 10px;
+    border-right: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fa-caret-down {
+    padding-left: 15px;
+}
+
+.options-list {
+    position: absolute;
+    background-color: white;
+    width: 75%;
+    max-height: 200px;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    top: 27px;
+    left: 12px;
+    border-radius: 10px;
+}
+
+.options-list li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.options-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.DetailsCheckoutError {
+    top: 55px;
+    left: 20px;
+    position: absolute;
+    color: red;
+}
+
+
+/* Dark and Light CSS */
+.LightDetailsContainer .DetailsBox input,
+.LightDetailsContainer .DetailsBox select {
+    &:hover {
+        box-shadow: 1px 1px 10px rgba(30, 30, 30, 0.311);
+    }
+}
+
+.DarkDetailsContainer .DetailsBox input,
+.DarkDetailsContainer .DetailsBox select {
+    &:hover {
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.311);
+    }
+}

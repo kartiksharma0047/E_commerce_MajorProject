@@ -1,0 +1,425 @@
+.ProductDiv {
+    width: 100vw;
+    padding: 5rem 0;
+}
+
+.ProductFiltering {
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.UpperFilterSection,
+.LowerFilterSection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+.UpperFilterSection {
+    padding-top: 30px;
+}
+
+.UpperFilterSection div,
+.LowerFilterSection div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductDiv .ProductFiltering input,
+.ProductDiv .ProductFiltering select,
+.ProductDiv .ProductFiltering button {
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.UpperFilterSection div label,
+.LowerFilterSection div label {
+    padding-left: 20px;
+    text-align: left;
+}
+
+#SelectPrice {
+    position: relative;
+}
+
+#SelectPrice:first-child input {
+    padding-left: 0px;
+    accent-color: #ff6cdd;
+}
+
+#SelectPrice input:last-child {
+    position: absolute;
+    top: -15px;
+    left: 78%;
+    width: 50px;
+    text-align: center;
+    background-color: #ff6cdd;
+}
+
+.LightProductDiv #SelectPrice input:last-child {
+    color: black;
+}
+
+.DarkProductDiv #SelectPrice input:last-child {
+    color: white;
+}
+
+#ResetFilter,
+#SearchFilter {
+    transition: all 0.3s;
+    font-weight: 700;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#ResetFilter:hover,
+#SearchFilter:hover {
+    transform: scale(1.07);
+}
+
+#ResetFilter:active,
+#SearchFilter:active {
+    transform: scale(0.97);
+}
+
+#ResetFilter {
+    background-color: #b65840;
+}
+
+.ProductList {
+    width: 85%;
+    margin: 3rem auto;
+}
+
+.ProductList h1 {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.ProductShow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ProductShow img {
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.ProductCardDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    background-color: black;
+    padding: 2rem 1rem 1.5rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.ProductCardDetail:hover {
+    transform: scale(1.02);
+}
+
+.ProductCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.ProductCardDetail h2 {
+    margin: 1rem 0;
+}
+
+.ProductShow p {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.ProductShow button {
+    display: block;
+    width: 130px;
+    font-size: 1.5rem;
+    padding: 0px;
+    border: none;
+    transition: all 0.3s;
+    border: none !important;
+    border-radius: 6px;
+    padding: 5px 7px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+.NonActiveBuyDivbtn {
+    display: none;
+}
+
+.ActiveBuyDivbtn {
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%) scale(0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: ProductAddedMark;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ProductAddedMark {
+    0% {
+        opacity:0;
+        top: 0px;
+        transform: translate(-50%) scale(0.5);
+    }
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity:1;
+    }
+    30%{
+        top: 42px;
+    }
+    50% {
+        transform: translate(-50%) scale(1);
+    }
+
+    70% {
+        top: 42px;
+        transform: translate(-50%) scale(1);
+        opacity: 1;
+    }
+    71%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        top: 0px;
+        transform: translate(-50%) scale(0.5);
+    }
+}
+
+#ActiveBuyContainer {
+    position: relative;
+    background-color: green;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#ActiveBuyContainer svg {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8) translateX(-1px);
+    color: white;
+}
+
+.CheckBoxBackground {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.ActiveBuySpanbtn {
+    animation-name: CheckMarkCover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes CheckMarkCover {
+    0% {
+        left: 0px;
+    }
+    10%{
+        left: 0px;
+    }
+    50% {
+        left: 35px;
+    }
+
+    99% {
+        left: 35px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+
+.SearchProduct {
+    position: relative;
+}
+
+.Suggestions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #004147;
+    list-style-type: none;
+    width: 100%;
+    border-radius: 6px;
+    top: 65px;
+    text-align: left;
+    border: 1px solid gray;
+    min-height: max-content;
+    max-height: 16.5vh;
+    font-size: 1.1rem;
+    cursor: default;
+    z-index: 2;
+}
+
+.Suggestions li {
+    padding-left: 20px;
+    background-color: initial;
+}
+
+.Suggestions li.active {
+    background-color: #1e90ff;
+}
+
+.Suggestions li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.Suggestions li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.PaginationBtns{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PaginationBtns li{
+    list-style: none;
+    margin: 0rem 1rem;
+    width: 50px;
+}
+.PaginationBtns li button{
+    cursor: pointer;
+}
+.PaginationBtns li button:hover{
+    background-color: rgb(0, 204, 255);
+    transform: scale(1.1);
+}
+
+/* Light and Dark CSS */
+
+.LightProductDiv {
+    background-color: rgb(208, 208, 208);
+    color: black;
+}
+
+.DarkProductDiv {
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
+
+.LightProductDiv .ProductFiltering {
+    background-color: #1e7e8f;
+}
+
+.DarkProductDiv .ProductFiltering {
+    background-color: #024950;
+}
+
+
+.LightProductDiv input,
+.LightProductDiv select,
+.LightProductDiv button {
+    color: black;
+    background-color: #00adbd;
+}
+
+.DarkProductDiv input,
+.DarkProductDiv select,
+.DarkProductDiv button {
+    color: white;
+    background-color: #004147;
+}
+
+.LightProductDiv input:hover,
+.LightProductDiv select:hover,
+.LightProductDiv button:hover {
+    border: 1px solid black;
+}
+
+.DarkProductDiv input:hover,
+.DarkProductDiv select:hover,
+.DarkProductDiv button:hover {
+    border: 1px solid white;
+}
+
+.LightProductDiv .ProductShow button:hover {
+    box-shadow: 1.5px 1.5px 1px black;
+}
+
+.DarkProductDiv .ProductShow button:hover {
+    box-shadow: 1px 1px 1px white;
+}
+
+.LightProductDiv .ProductShow button:active {
+    box-shadow: -1.5px 1.5px 1px black;
+}
+
+.DarkProductDiv .ProductShow button:active {
+    box-shadow: -1px 1px 1px white;
+}
+
+.LightProductDiv .ProductList {
+    color: black;
+}
+
+.DarkProductDiv .ProductList {
+    color: white;
+}
+
+.LightProductDiv .ProductList h1 {
+    border-bottom: 2px solid black;
+}
+
+.DarkProductDiv .ProductList h1 {
+    border-bottom: 2px solid white;
+}
